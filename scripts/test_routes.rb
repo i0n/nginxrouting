@@ -36,24 +36,3 @@ old_urls[0..2].each do |u|
 end
 
 
-# DEBUG - old code
-if false
-# initial RestClient test
-RestClient.get ('http://rjjm.net/hallve') { |response, request, result, &block|
-
-
-
-case response.code
-when 200
-	puts 'yay!'
-when 301
-	puts 'dey muuved id!'
-when 400
- 	puts 'boo!'
-else 
-	puts 'hmm?'
-#	response.return!(request, result, &block)
-end 
-}
-
-end
