@@ -8,7 +8,7 @@ when 200
 	puts 'yay!'
 when 301
 	puts 'dey muuved id!'
-when 404
+when 400
  	puts 'boo!'
 else 
 	puts 'hmm?'
