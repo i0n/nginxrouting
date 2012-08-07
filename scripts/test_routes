@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+ROOT_PATH = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+
 require 'rest_client'
 require 'spreadsheet'
 require 'trollop'
@@ -12,7 +14,7 @@ Script takes a file containing urls and runs them against a specified domain.
 Don't use any of the these options if you want to run the default test.
 
 EOS
-	opt :file, "Spreadsheet (xls) to take the URLs from", :short => "f", :default => 'spreadsheets/bizlink_ip_mappings.xls'
+	opt :file, "Spreadsheet (xls) to take the URLs from", :short => "f", :default => "#{ROOT_PATH}/spreadsheets/bizlink_ip_mappings.xls"
 	opt :column, "Column to take the URLs from (if more than one column in spreadsheet) - start at 0", :short => "c", :default => 0
 	opt :domain, "The domain to convert the urls to (e.g. entering 'google.com' will replace 'http://yahoo.com/search=this' with 'http://google.com/search=this' )", :short => 'd'
 	
